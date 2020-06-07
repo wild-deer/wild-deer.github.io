@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200522101511186.png">
 <meta property="og:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200525161648567.png">
 <meta property="article:published_time" content="2020-05-17T15:02:36.828Z">
-<meta property="article:modified_time" content="2020-05-29T08:31:31.357Z">
+<meta property="article:modified_time" content="2020-05-29T09:34:11.270Z">
 <meta property="article:author" content="Jeremy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200521163323568.png">
@@ -288,7 +288,7 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-29T16:31:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-29T17:34:11+08:00">
                 2020-05-29
               </time>
             
@@ -322,7 +322,8 @@
       
 
       
-        <p>Java语言高级特性</p>
+        <center>Java语言高级特性</center>
+
 <a id="more"></a> 
 
 <h3 id="1-Thread实现多线程"><a href="#1-Thread实现多线程" class="headerlink" title="1.Thread实现多线程"></a>1.Thread实现多线程</h3><p>多线程应该执行的功能都应该在<code>run()</code>方法中定义</p>
@@ -759,8 +760,17 @@
 <li>文件是否课读：<code>public boolean canRead();</code></li>
 <li>文件是否可写：<code>public boolean canWrite();</code></li>
 <li>获取文件长度：<code>public long length();</code>该方法返回的是 long 数据类型：字节长度</li>
+<li>最后一次修改日期时间：<code>public long lastModified();</code></li>
+<li>判断是否是文件：<code>public boolean isFile();</code></li>
+<li>判断是否是文件：<code>public boolean isDirectory();</code></li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator + <span class="string">"\\hello\\demo\\mldn.txt"</span>) ;</span><br><span class="line">      System.out.println(<span class="string">"文件是否可读,"</span> + file.canRead());</span><br><span class="line">      System.out.println(<span class="string">"文件是否可写,"</span> + file.canWrite());</span><br><span class="line">        System.out.println(<span class="string">"文件大小"</span> + MathUtil.round(file.length()/（<span class="keyword">double</span>）<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MathUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MathUtil</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">round</span><span class="params">(<span class="keyword">double</span> num, <span class="keyword">int</span> scale)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.round(Math.pow(<span class="number">10</span>,scale)*num)/Math.pow(<span class="number">10</span>,scale);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator + <span class="string">"\\hello\\demo\\mldn.txt"</span>) ;</span><br><span class="line">        System.out.println(<span class="string">"文件是否可读,"</span> + file.canRead());</span><br><span class="line">        System.out.println(<span class="string">"文件是否可写,"</span> + file.canWrite());</span><br><span class="line">        System.out.println(<span class="string">"文件大小"</span> + MathUtil.round(file.length()/(<span class="keyword">double</span>)<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"最后的修改时间："</span> + <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>).format(<span class="keyword">new</span> Date(file.lastModified())));</span><br><span class="line">        System.out.println(<span class="string">"是目录吗？"</span> + file.isDirectory());</span><br><span class="line">        System.out.println(<span class="string">"是文件吗？"</span> + file.isFile());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>列出目录的方法：</p>
+<ul>
+<li>列出目录内容：<code>public File[] listFiles();</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator ) ;</span><br><span class="line">        <span class="keyword">if</span> (file.isDirectory()) &#123;</span><br><span class="line">            <span class="comment">//当前是一个目录</span></span><br><span class="line">            File result [] = file.listFiles() ;<span class="comment">//列出目录种的全部内容</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; result.length; i++) &#123;</span><br><span class="line">                System.out.println(result[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
