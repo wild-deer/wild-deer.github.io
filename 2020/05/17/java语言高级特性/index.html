@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="Java语言高级特性">
+<meta name="description" content="1.Thread实现多线程多线程应该执行的功能都应该在run()方法中定义 要想启动多线程，需要Start()方法执行 例：使用run()方法 1234567891011121314151617class MyThread extends Thread&amp;#123;    private String title ;    public MyThread(String title) &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java语言高级特性">
 <meta property="og:url" content="http://yoursite.com/child/2020/05/17/java%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="Jeremy的博客">
-<meta property="og:description" content="Java语言高级特性">
+<meta property="og:description" content="1.Thread实现多线程多线程应该执行的功能都应该在run()方法中定义 要想启动多线程，需要Start()方法执行 例：使用run()方法 1234567891011121314151617class MyThread extends Thread&amp;#123;    private String title ;    public MyThread(String title) &amp;#123;">
 <meta property="og:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200521163323568.png">
 <meta property="og:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200522101511186.png">
 <meta property="og:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200525161648567.png">
 <meta property="article:published_time" content="2020-05-17T15:02:36.828Z">
-<meta property="article:modified_time" content="2020-05-29T09:34:11.270Z">
+<meta property="article:modified_time" content="2020-06-18T06:40:51.083Z">
 <meta property="article:author" content="Jeremy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/jeremy_ne/giteePagesImages/raw/master/image-20200521163323568.png">
@@ -288,8 +288,8 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-29T17:34:11+08:00">
-                2020-05-29
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-18T14:40:51+08:00">
+                2020-06-18
               </time>
             
           </span>
@@ -322,11 +322,7 @@
       
 
       
-        <center>Java语言高级特性</center>
-
-<a id="more"></a> 
-
-<h3 id="1-Thread实现多线程"><a href="#1-Thread实现多线程" class="headerlink" title="1.Thread实现多线程"></a>1.Thread实现多线程</h3><p>多线程应该执行的功能都应该在<code>run()</code>方法中定义</p>
+        <h3 id="1-Thread实现多线程"><a href="#1-Thread实现多线程" class="headerlink" title="1.Thread实现多线程"></a>1.Thread实现多线程</h3><p>多线程应该执行的功能都应该在<code>run()</code>方法中定义</p>
 <p>要想启动多线程，需要<code>Start()</code>方法执行</p>
 <p>例：使用<code>run()</code>方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String title ;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.title = title ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;<span class="comment">//线程的主题方法</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt; <span class="number">10</span> ;x ++) &#123;</span><br><span class="line">                System.out.println(<span class="keyword">this</span>.title + <span class="string">"运行,x = "</span>+ x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadDemo</span> </span>&#123;</span><br><span class="line"><span class="keyword">new</span> Thread(<span class="string">"线程A"</span>).run() ;</span><br><span class="line"><span class="keyword">new</span> Thread(<span class="string">"线程b"</span>).run() ;</span><br><span class="line"><span class="keyword">new</span> Thread(<span class="string">"线程c"</span>).run() ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -891,7 +887,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -913,7 +909,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
