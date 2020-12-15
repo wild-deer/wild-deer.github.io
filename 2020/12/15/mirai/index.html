@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mirai," />
 
 
 
@@ -81,13 +81,16 @@
 
 
 
-<meta name="description" content="DO NOT SAY &#x3D; DO AND KEEP">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jeremy的博客">
-<meta property="og:url" content="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta name="description" content="mirai是使用过程中遇到的一些问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mirai">
+<meta property="og:url" content="http://yoursite.com/child/2020/12/15/mirai/index.html">
 <meta property="og:site_name" content="Jeremy的博客">
-<meta property="og:description" content="DO NOT SAY &#x3D; DO AND KEEP">
+<meta property="og:description" content="mirai是使用过程中遇到的一些问题">
+<meta property="article:published_time" content="2020-12-15T12:25:20.000Z">
+<meta property="article:modified_time" content="2020-12-15T12:41:00.662Z">
 <meta property="article:author" content="Jeremy">
+<meta property="article:tag" content="mirai">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/child/tags/博客搭建/"/>
+  <link rel="canonical" href="http://yoursite.com/child/2020/12/15/mirai/"/>
 
 
 
 
 
-  <title>标签: 博客搭建 | Jeremy的博客</title>
+  <title>mirai | Jeremy的博客</title>
   
 
 
@@ -143,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,54 +230,163 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>博客搭建<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/12/15/mirai/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jeremy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeremy的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/04/07/My-New-Post/" itemprop="url">
-              
-                <span itemprop="name">hexo博客搭建初体验</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">mirai</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-07T15:45:09+08:00"
-              content="2020-04-07" >
-          04-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-15T20:25:20+08:00">
+                2020-12-15
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-12-15T20:41:00+08:00">
+                2020-12-15
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <center>mirai是使用过程中遇到的一些问题</center>
+
+<a id="more"></a>
+
+<h3 id="出现“无法登录，请更新qq版本”的问题"><a href="#出现“无法登录，请更新qq版本”的问题" class="headerlink" title="出现“无法登录，请更新qq版本”的问题"></a>出现“无法登录，请更新qq版本”的问题</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation <span class="string">'net.mamoe:mirai-core-qqandroid:1.3.0'</span><span class="comment">//此处版本应替换为当前最新</span></span><br><span class="line">    implementation <span class="string">"org.jetbrains.kotlin:kotlin-stdlib-jdk8"</span></span><br><span class="line">    testCompile group: <span class="string">'junit'</span>, name: <span class="string">'junit'</span>, version: <span class="string">'4.12'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过更换版本解决</p>
+<h3 id="出现异常"><a href="#出现异常" class="headerlink" title="出现异常"></a>出现异常</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">An exception was thrown under a coroutine of Bot</span><br><span class="line">java.lang.ClassCastException: net.mamoe.mirai.qqandroid.contact.FriendImpl cannot be cast to net.mamoe.mirai.contact.Member</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mirai/" rel="tag"># mirai</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/11/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%EF%BC%88Markdown%EF%BC%89/" rel="next" title="技术文档写作规范（Markdown）">
+                <i class="fa fa-chevron-left"></i> 技术文档写作规范（Markdown）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -282,6 +394,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -304,8 +420,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -379,6 +504,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#出现“无法登录，请更新qq版本”的问题"><span class="nav-number">1.</span> <span class="nav-text">出现“无法登录，请更新qq版本”的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#出现异常"><span class="nav-number">2.</span> <span class="nav-text">出现异常</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -506,6 +647,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
